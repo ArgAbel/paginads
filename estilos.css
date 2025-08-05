@@ -3,3 +3,56 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "snav snav snav"
+        "hero hero hero"
+       " recursos    juegos .  "
+       "manifiesto manifiesto manifiesto"
+       "redes redes redes"
+       "foot foot foot";
+       
+        
+      
+}
+.container nav {
+    grid-area: snav;
+    background: #2e1687;
+    color: white;
+    padding: 10px;
+}
+.container .hero {
+    grid-area: hero;
+    background: #83145c;
+    padding: 20px;
+}
+.container .juegos {
+    grid-area: juegos;
+    background: #fa3333;
+    padding: 20px;
+}
+.container .recursos {  
+    grid-area: recursos;
+    background: #f0a30a;
+    background-color: #d1d1d1;
+    padding: 20px;
+}
+.container .content {
+    grid-area: manifiesto;
+    background-color: #bc2080;
+    padding: 20px;
+}
+.container .redesycanales {
+   grid-area: redes;
+    background: #4db330;
+    padding: 20px;
+}
+.container footer {
+    grid-area: foot;;
+    background: #e62828;
+    color: white;s
+    padding: 10px;
+}
