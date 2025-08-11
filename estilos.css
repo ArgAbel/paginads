@@ -3,20 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'galiska';
+    src: url(/Galiscka\ Font/) format('truetype');
+    src: url(/Galiscka\ Font/) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.hero :nth-child(1) {
+    color: rgb(215, 32, 32);
+    font-size: 14rem;
+    text-align: center;
+    margin-top: 20px;
+    font-family:'galiska', sans-serif;
+    font-weight: 900;
+   
+}
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 15% 1fr 1fr ;
+    grid-template-rows: 4fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
-        "snav snav snav"
-        "hero hero hero"
-       " recursos    juegos .  "
-       "manifiesto manifiesto manifiesto"
-       "redes redes redes"
-       "foot foot foot";
+        
+        "snav hero hero"
+        "snav about about"
+       " snav recursos    juegos "
+       "snav manifiesto manifiesto"
+       "snav redes redes"
+       "snav foot foot";
        
         
       
+}
+.container .about {
+    grid-area: about;
+    background: #1a1a1a;
+    color: white;
+    padding: 20px;
 }
 .container nav {
     grid-area: snav;
