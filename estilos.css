@@ -36,10 +36,13 @@
       
 }
 .container .about {
+    display: flex;
     grid-area: about;
     background: #1a1a1a;
     color: white;
     padding: 20px;
+    align-items: center;
+    justify-content: center;
 }
 .container nav {
     grid-area: snav;
@@ -49,12 +52,20 @@
 }
 .container .hero {
     grid-area: hero;
-    background: #83145c;
     padding: 20px;
+   
+}
+.maskedimage{
+    mask-image:url(/imagenes/letrasabelv3.svg);
+    width: 100%;
+    height: 80%;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    
 }
 .container .juegos {
     grid-area: juegos;
-    background: #fa3333;
+    background: #fa3333;    
     padding: 20px;
 }
 .container .recursos {  
@@ -78,4 +89,36 @@
     background: #e62828;
     color: white;
     padding: 10px;
+}
+
+H1{
+    font-family: 'galiska', sans-serif;
+    font-size: 3.5em;  
+   }
+
+H1 > span{
+    position: relative; 
+    display: inline-block;
+    color: #ff8800;
+    height: 1.25em;
+    vertical-align: middle;
+    overflow: hidden;
+}
+h1 > span > span{
+    display: block;
+    animation: animatewords 5s infinite ease;
+    animation-iteration-count: 4;
+    animation-delay: 5s;
+}
+@keyframes animatewords {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-100%); }
+    50% { transform: translateY(-200%); }
+    65% { transform: translateY(-250%); }
+    75% { transform: translateY(-300%); }
+    100% { transform: translateY(-400%); }
+   
+}
+.hero {
+   
 }
