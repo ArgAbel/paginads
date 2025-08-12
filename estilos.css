@@ -21,16 +21,16 @@
 }
 .container {
     display: grid;
-    grid-template-columns: 15% 1fr 1fr ;
+    grid-template-columns: 20% 1fr 1fr ;
     grid-template-rows: 4fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         
         "snav hero hero"
         "snav about about"
-       " snav recursos    juegos "
-       "snav manifiesto manifiesto"
-       "snav redes redes"
-       "snav foot foot";
+       " . tecnologia    juegos "
+       " . manifiesto manifiesto"
+       " .  redes redes"
+       " . foot foot";
        
         
       
@@ -43,12 +43,56 @@
     padding: 20px;
     align-items: center;
     justify-content: center;
+    font-family: 'galiska', sans-serif;
+    font-size: 1.2em;
 }
 .container nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     grid-area: snav;
-    background: #2e1687;
+    background: #14121b;
     color: white;
     padding: 10px;
+    width: 20%;
+    height: 100vh;
+    
+  }
+  .container nav div{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+      font-family: 'galiska', sans-serif;
+    font-size: 3em;
+   background-color: #110606;
+   margin: 20px; ;
+   align-items: center;
+    justify-content: center;
+    height: 150px;
+   
+
+}
+.container nav div:hover{
+    background-color: #831b1b;
+    transition: 0.3s;
+}
+ a{
+    text-decoration: none;
+    color: white;
+    
+    
+    
+  }
+  a:hover{
+    color: #ff0d0d;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+a{
+    visited: none;
+    text-decoration: none;
 }
 .container .hero {
     grid-area: hero;
@@ -68,12 +112,41 @@
     background: #fa3333;    
     padding: 20px;
 }
-.container .recursos {  
-    grid-area: recursos;
+.container .tecnologias {  
+    display: flex;  
+    flex-direction: column;
+    align-items: bottom; 
+    gap: 20px;
+    grid-area: tecnologia;
     background: #f0a30a;
     background-color: #d1d1d1;
     padding: 20px;
+    width: 100%;
+    overflow: hidden;
 }
+.ache2{
+    font-family: 'galiska', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: #000000;
+}
+.fotoico {
+   width: 300px;
+   height: 300px;
+   padding-bottom: 3px;
+   
+}
+.fotinfinito{
+    display: flex;
+   
+    animation: animate 10s linear infinite;
+}
+@keyframes animate { 
+    from{transform: translatex(0);}
+    to {transform: translatex(-100%);}
+        
+}
+
 .container .content {
     grid-area: manifiesto;
     background-color: #bc2080;
