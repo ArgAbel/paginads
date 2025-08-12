@@ -15,12 +15,13 @@
 .container {
     display: grid;
     grid-template-columns: 20% 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         
         "snav hero hero"
         "snav about about"
-       " . redes    juegos "
+       " . carrusel carrusel"
+       " . juegos juegos"
        " . manifiesto manifiesto"
        " .  tecnologia tecnologia"
        " . foot foot";
@@ -75,9 +76,6 @@
     transition: 0.3s;
     transform: scale(1.05);
 }
- 
-  
-
 a:visited{ 
     text-decoration: none;
 }
@@ -91,9 +89,7 @@ a:visited{
 }
 .container .hero {
     grid-area: hero;
-    padding: 20px;
-  
-   
+    padding: 20px;    
 }
 .maskedimage{
     mask-image:url(/imagenes/letrasabelv3.svg);
@@ -148,10 +144,10 @@ a:visited{
     background-color: #bc2080;
     padding: 20px;
 }
-.container .redesycanales {
-   grid-area: redes;
-    background: #4db330;
-    padding: 20px;
+.container .carruselinformativo {
+   grid-area: carrusel;
+   background-color: #4db330;
+    
 }
 footer {
     grid-area: foot;;
@@ -190,8 +186,5 @@ h1 > span > span{
     65% { transform: translateY(-250%); }
     75% { transform: translateY(-300%); }
     100% { transform: translateY(-400%); }
-   
-}
-.hero {
    
 }
