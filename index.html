@@ -44,7 +44,45 @@
           </span>
         </h1>
       </section>
-      <section class="juegos">otros juegos</section>
+      <section class="contacto">
+        <h2>Formulario de contacto</h2>
+        <div class="containerform">
+          <form class="formulario" action="action_page.php">
+            <label for="fname">Nombre</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="nombre"
+            />
+
+            <label for="lname">Apellido</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Apellido"
+            />
+
+            <label for="country">Requisito de contacto</label>
+            <select id="rcontacto" name="contratacion">
+              <option value="Presupuesto">Presupuesto</option>
+              <option value="contratacion">contratacion</option>
+              <option value="consulta">consulta</option>
+            </select>
+
+            <label for="comentarios">Comentarios</label>
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              placeholder="escriba aqui los detalles de su consulta"
+              style="height: 200px"
+            ></textarea>
+
+            <input type="submit" value="contactar" />
+          </form>
+        </div>
+      </section>
       <aside class="tecnologias">
         <h2 class="ache2">Lenguajes Aprendidos</h2>
         <div class="fotinfinito">
@@ -65,7 +103,7 @@
           <img src="/iconos/github.svg" alt="github" class="fotoico" />
         </div>
       </aside>
-      <section class="content">manifiesto</section>
+
       <section class="carruselinformativo">
         redesycanales
 

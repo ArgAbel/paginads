@@ -1,8 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 @font-face {
     font-family: 'galiska';
     src: url(/Galiscka\ Font/) format('truetype');
@@ -10,19 +5,25 @@
     font-weight: normal;
     font-style: normal;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'galiska', sans-serif;
+}
+
 
 
 .container {
     display: grid;
     grid-template-columns: 20% 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr  1fr 1fr;
         grid-template-areas: 
         
         "snav hero hero"
         "snav about about"
        " . carrusel carrusel"
-       " . juegos juegos"
-       " . manifiesto manifiesto"
+       " . contactoycon contactoycon"
        " .  tecnologia tecnologia"
        " . foot foot";
        
@@ -99,15 +100,60 @@ a:visited{
     mask-repeat: no-repeat;
     
 }
-.container .juegos {
-    grid-area: juegos;
-    background: #fa3333;    
+.container .contacto {
+    grid-area: contactoycon;
+    display: flex;       
     padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.container .contacto h2 {
+   
+    font-size: 6rem;
+    color: #000000;
+}
+.formulario {
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+    width: 100%;
+    max-width: 600px;
+   /* margin: auto;*/
+    font-size: 3em;
+}
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  font-size: 2rem;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.containerform {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 .container .tecnologias {  
     display: flex;  
     flex-direction: column;
-    align-items: bottom; 
+    align-items: center; 
     gap: 20px;
     grid-area: tecnologia;
     background: #f0a30a;
@@ -130,20 +176,19 @@ a:visited{
 }
 .fotinfinito{
     display: flex;
-   
-    animation: animate 10s linear infinite;
+   width: 200%;
+    animation: infiniteico 10s linear infinite;
 }
-@keyframes animate { 
+.fotinfinito:hover {
+    animation-play-state: paused;
+}
+@keyframes infiniteico { 
     from{transform: translatex(0);}
     to {transform: translatex(-100%);}
         
 }
 
-.container .content {
-    grid-area: manifiesto;
-    background-color: #bc2080;
-    padding: 20px;
-}
+
 .container .carruselinformativo {
    grid-area: carrusel;
    background-color: #4db330;
