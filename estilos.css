@@ -10,6 +10,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'galiska', sans-serif;
+     scroll-behavior: smooth;
+
 }
 
 
@@ -17,7 +19,7 @@
 .container {
     display: grid;
     grid-template-columns: 20% 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr  1fr 1fr;
+    grid-template-rows: auto 200px 1000px auto auto auto;
         grid-template-areas: 
         
         "snav hero hero"
@@ -191,21 +193,25 @@ input[type=submit]:hover {
 
 .container .carruselinformativo {
    grid-area: carrusel;
-   background-color: #4db330;
+ 
+    
+  
     
 }
 /*estilos de tarjetas adentro de carrusel informativo*/
 .bodies{
-    background-color: aqua;
+    background-color: rgb(209, 212, 212);
     display: flex;
     justify-content: center;    
     align-items: center;
     flex-direction: column;
+    height: 100%;
+    gap: 100px;
 }
 .flip-card {
   background-color: transparent;
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   perspective: 1000px;
   
 }
@@ -222,6 +228,16 @@ input[type=submit]:hover {
 .box:hover{
     animation-play-state: paused;
 }
+.flip-card-back p{
+  font-size: 1.5em;
+  font-family: 'galiska', sans-serif;
+  color: #000000;
+  padding: 5px;
+  font-weight: bold;
+
+
+} 
+
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -242,9 +258,11 @@ input[type=submit]:hover {
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: #606c74;
   color: white;
   transform: rotateY(180deg);
+   width: 350px;
+  height: 350px;
 }
 
 .box{
