@@ -32,6 +32,50 @@
         
       
 }
+@media screen and (max-width: 768px) {
+    .container {
+      grid-template-columns:1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "snav"
+        "hero"
+        "about"
+        "carrusel"
+        "contactoycon"
+        "tecnologia"
+        "foot";}
+         .container .main-nav {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    grid-area: snav;
+    display: flex;
+    flex-direction: row;      
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    background: #14121b;
+    color: white;
+    padding: 10px;}
+    .container .main-nav .nav-links-container a{
+       display: none;
+    }    
+    .container .main-nav .nav-header {
+        color: aliceblue}
+    .hamburgerico {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .container nav a.show {
+      display: block;
+    }
+    .fotonav{
+      display: none;
+    }
+    }
+    
 .container .about {
     display: flex;
     grid-area: about;
@@ -57,6 +101,10 @@
     height: 100vh;
     }
     
+  
+  .hamburguerico{
+    display: none;
+    }
   .container nav a{
     width: 80%;
     font-family: 'galiska', sans-serif;
