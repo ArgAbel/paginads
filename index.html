@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
-    <main class="container" style="background-color: aliceblue">
+    <main class="container">
       <nav class="main-nav">
-        <div nav class="nav-header" style="background-color: aliceblue">
+        <div class="nav-header">
           <img
             src="/imagenes/fotoabelbarranav.jpeg"
             alt="foto Abel"
@@ -17,23 +17,26 @@
           />
           <img
             src="imagenes/hamburguer_135361.png"
+            style="width: 50px; height: 50px"
             alt="hamburguer icon"
             class="hamburguerico"
           />
         </div>
         <div class="nav-links-container">
-          <a href="#home">inicio</a>
-          <a href="#about">INFORMACION IMPORTANTE</a>
-          <a href="#tecnologia">TECNOLOGIAS</a>
-          <a href="#contact">CONTACTO</a>
+          <a class="pa" href="#home">inicio</a>
+          <a class="pa" href="#about">INFORMACION IMPORTANTE</a>
+          <a class="pa" href="#tecnologia">TECNOLOGIAS</a>
+          <a class="pa" href="#contact">CONTACTO</a>
         </div>
       </nav>
       <script>
-        const hamburgerIcon = document.querySelector(".hamburgerico");
-        const navLinks = document.querySelector(".container nav a"); // Ajusta el selector si tienes más de uno
+        const hamburgerIcon = document.querySelector(".hamburguerico");
+        const navLinksContainer = document.querySelector(
+          ".nav-links-container"
+        ); // Ajusta el selector si tienes más de uno
 
         hamburgerIcon.addEventListener("click", () => {
-          navLinks.classList.toggle("show");
+          navLinksContainer.classList.toggle("show");
         });
       </script>
       <section class="hero" id="home">
